@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Fetxh API Working</title>
+        <link href="style.css" rel = "stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <script>
+            // function getUserData(){
+            //   fetch("https://fakerapi.it/api/v1/persons")
+            //     .then((response)=>{
+            //         response.json().then((fonaldata)=>{
+            //             console.log(fonaldata);
+            //         })
+            //     })
+            // }
+
+            async function getUserData(){
+                    const response = await fetch("https://fakerapi.it/api/v1/persons")
+                    const finalData = await response.json()
+                    console.log(finalData);
+            }
+        </script>
+        <button onclick="getUserData()" >Get User Data</button> 
+        
+    </body>
+</html>
